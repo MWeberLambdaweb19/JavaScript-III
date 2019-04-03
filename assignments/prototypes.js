@@ -33,13 +33,14 @@ GameObject.prototype.destroy = function(){
 function CharacterStats (attrs2){
   GameObject.call(this, attrs2) ;
   this.healthPoints = attrs2.healthPoints;
+  this.strength = attrs2.strength;
 };
 CharacterStats.prototype = Object.create(GameObject.prototype);
 CharacterStats.prototype.takeDamage = function(){
-  return `${this.name} took damage.`
+  return `${this.name} took damage ${this.strength}.`
 };
 CharacterStats.prototype.giveDamage = function(){
-  return `${this.name} gave damage.`
+  return `${this.name} gave damage ${this.strength}.`
 }
 
 /*
@@ -61,6 +62,14 @@ Humanoid.prototype = Object.create(CharacterStats.prototype);
 Humanoid.prototype.greet = function(){
   return `${this.name} offers a greeting in ${this.language}`;
 };
+Humanoid.prototype.attack = function(target){
+  target.healthPoints -= 5;
+  if (target.healthPoints === 0){
+    return target.destroy();
+  } else {
+  return target.healthPoints;
+};
+};
 
 // Stretch Goals!
 
@@ -77,6 +86,17 @@ Hero.prototype.shout = function(){
 };
 Hero.prototype.motive = function(){
   return `The ${this.title} ${this.name}, calls out their motivation, ${this.motivation}`;
+};
+Hero.prototype.attack = function(target){
+  target.healthPoints -= 10;
+  if (target.healthPoints === 0){
+    return target.destroy();
+  } else {
+  return `${target.name} has ${target.healthPoints} hit points left!`;
+};
+};
+Hero.prototype.screech = function(){
+  return `${this.name}, the Hero, gave out a loud victory screech over the land at Jabba's defeat!`;
 };
 
 function Villain (attrs5) {
@@ -111,6 +131,7 @@ Villain.prototype.cackle = function (){
       'Staff of Shamalama',
     ],
     language: 'Common Tongue',
+    strength: 5,
   });
 
   const swordsman = new Humanoid({
@@ -128,6 +149,7 @@ Villain.prototype.cackle = function (){
       'Shield',
     ],
     language: 'Common Tongue',
+    strength: 5,
   });
 
   const archer = new Humanoid({
@@ -145,6 +167,7 @@ Villain.prototype.cackle = function (){
       'Dagger',
     ],
     language: 'Elvish',
+    strength: 5,
   });
 
   // Stretch Goals!
@@ -164,6 +187,7 @@ Villain.prototype.cackle = function (){
       'Dragon Kite-Shield',
     ],
     language: 'l33tsp3@k',
+    strength: 10,
     title: 'Ultra Captain-Knight Class Five',
     motivation: "To be the best, like no one ever was!",
     saying: "'I am referencing Runescape and Pokemon in my character!'"
@@ -184,9 +208,10 @@ Villain.prototype.cackle = function (){
       'The Dagger of False-Euphoria',
     ],
     language: 'c0d3sp3@k',
+    strength: 10,
     title: 'Ultra Jerk',
     motivation: "'No truly evil person needs motivation!'",
-    saying: "'To trick others into not getting references!'",
+    saying: "'I want to trick others into not getting references!'",
     evilplan:"'You weren't expecting a Jojo reference, but it was me, Dio!'",
   })
 
@@ -212,29 +237,67 @@ Villain.prototype.cackle = function (){
   // console.log(mweber.title);
   // console.log(mweber.motivation);
   // console.log(mweber.saying);
-  console.log(mweber.greet());
-  console.log(mweber.takeDamage());
-  console.log(mweber.destroy());
-  console.log(mweber.giveDamage());
+  // console.log(mweber.greet());
+  // console.log(mweber.takeDamage());
+  // console.log(mweber.destroy());
+  // console.log(mweber.giveDamage());
+  // console.log(mweber.shout());
+  // console.log(mweber.motive());
+
+  // console.log(jabba.createdAt);
+  // console.log(jabba.dimensions);
+  // console.log(jabba.healthPoints);
+  // console.log(jabba.name);
+  // console.log(jabba.team);
+  // console.log(jabba.weapons);
+  // console.log(jabba.title);
+  // console.log(jabba.motivation);
+  // console.log(jabba.saying);
+  // console.log(jabba.greet());
+  // console.log(jabba.takeDamage());
+  // console.log(jabba.destroy());
+  // console.log(jabba.giveDamage());
+  // console.log(jabba.shout());
+  // console.log(jabba.motive());
+  // console.log(jabba.cackle());
+
+  console.log(mweber.giveDamage(jabba))
+  console.log(jabba.takeDamage(mweber));
+  console.log(mweber.attack(jabba));
+  console.log(jabba.giveDamage(mweber));
+  console.log(mweber.takeDamage(jabba));
+  console.log(jabba.attack(mweber));
   console.log(mweber.shout());
+
+  console.log(mweber.giveDamage(jabba))
+  console.log(jabba.takeDamage(mweber));
+  console.log(mweber.attack(jabba));
+  console.log(jabba.giveDamage(mweber));
+  console.log(mweber.takeDamage(jabba));
+  console.log(jabba.attack(mweber));
+  console.log(jabba.shout());
+
+  console.log(mweber.giveDamage(jabba))
+  console.log(jabba.takeDamage(mweber));
+  console.log(mweber.attack(jabba));
+  console.log(jabba.giveDamage(mweber));
+  console.log(mweber.takeDamage(jabba));
+  console.log(jabba.attack(mweber));
   console.log(mweber.motive());
 
-  console.log(jabba.createdAt);
-  console.log(jabba.dimensions);
-  console.log(jabba.healthPoints);
-  console.log(jabba.name);
-  console.log(jabba.team);
-  console.log(jabba.weapons);
-  console.log(jabba.title);
-  console.log(jabba.motivation);
-  console.log(jabba.saying);
-  console.log(jabba.greet());
-  console.log(jabba.takeDamage());
-  console.log(jabba.destroy());
-  console.log(jabba.giveDamage());
-  console.log(jabba.shout());
+  console.log(mweber.giveDamage(jabba))
+  console.log(jabba.takeDamage(mweber));
+  console.log(mweber.attack(jabba));
+  console.log(jabba.giveDamage(mweber));
+  console.log(mweber.takeDamage(jabba));
+  console.log(jabba.attack(mweber));
   console.log(jabba.motive());
+
   console.log(jabba.cackle());
+  console.log(mweber.giveDamage(jabba))
+  console.log(jabba.takeDamage(mweber));
+  console.log(mweber.attack(jabba));
+  console.log(mweber.screech());
 
   // Stretch task: 
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
