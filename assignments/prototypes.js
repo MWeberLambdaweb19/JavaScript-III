@@ -96,7 +96,7 @@ Hero.prototype.attack = function(target){
 };
 };
 Hero.prototype.screech = function(){
-  return `${this.name}, the Hero, gave out a loud victory screech over the land at Jabba's defeat!`;
+  return `${this.name}, the Hero, gave out a loud victory screech over the land at notMack's defeat!`;
 };
 
 function Villain (attrs5) {
@@ -193,7 +193,7 @@ Villain.prototype.cackle = function (){
     saying: "'I am referencing Runescape and Pokemon in my character!'"
   });
 
-  const jabba = new Villain ({
+  const notMack = new Villain ({
     createdAt: new Date(),
     dimensions: {
       length: 9,
@@ -201,8 +201,8 @@ Villain.prototype.cackle = function (){
       height: 9,
     },
     healthPoints: 50,
-    name: 'Jabba the Script',
-    team: 'The Bad Crew featuring Jabba',
+    name: 'notMack the Villain',
+    team: 'The Bad Crew featuring notMack',
     weapons: [
       'The Staff of Frustration',
       'The Dagger of False-Euphoria',
@@ -215,91 +215,93 @@ Villain.prototype.cackle = function (){
     evilplan:"'You weren't expecting a Jojo reference, but it was me, Dio!'",
   })
 
-  // console.log(mage.createdAt); // Today's date
-  // console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
-  // console.log(swordsman.healthPoints); // 15
-  // console.log(mage.name); // Bruce
-  // console.log(swordsman.team); // The Round Table
-  // console.log(mage.weapons); // Staff of Shamalama
-  // console.log(archer.language); // Elvish
-  // console.log(archer.greet()); // Lilith offers a greeting in Elvish.
-  // console.log(mage.takeDamage()); // Bruce took damage.
-  // console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
+  console.log(mage.createdAt); // Today's date
+  console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
+  console.log(swordsman.healthPoints); // 15
+  console.log(mage.name); // Bruce
+  console.log(swordsman.team); // The Round Table
+  console.log(mage.weapons); // Staff of Shamalama
+  console.log(archer.language); // Elvish
+  console.log(archer.greet()); // Lilith offers a greeting in Elvish.
+  console.log(mage.takeDamage()); // Bruce took damage.
+  console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
  
   // Stretch Tasks!
 
-  // console.log(mweber.createdAt);
-  // console.log(mweber.dimensions);
-  // console.log(mweber.healthPoints);
-  // console.log(mweber.name);
-  // console.log(mweber.team);
-  // console.log(mweber.weapons);
-  // console.log(mweber.title);
-  // console.log(mweber.motivation);
-  // console.log(mweber.saying);
-  // console.log(mweber.greet());
-  // console.log(mweber.takeDamage());
-  // console.log(mweber.destroy());
-  // console.log(mweber.giveDamage());
-  // console.log(mweber.shout());
-  // console.log(mweber.motive());
-
-  // console.log(jabba.createdAt);
-  // console.log(jabba.dimensions);
-  // console.log(jabba.healthPoints);
-  // console.log(jabba.name);
-  // console.log(jabba.team);
-  // console.log(jabba.weapons);
-  // console.log(jabba.title);
-  // console.log(jabba.motivation);
-  // console.log(jabba.saying);
-  // console.log(jabba.greet());
-  // console.log(jabba.takeDamage());
-  // console.log(jabba.destroy());
-  // console.log(jabba.giveDamage());
-  // console.log(jabba.shout());
-  // console.log(jabba.motive());
-  // console.log(jabba.cackle());
-
-  console.log(mweber.giveDamage(jabba))
-  console.log(jabba.takeDamage(mweber));
-  console.log(mweber.attack(jabba));
-  console.log(jabba.giveDamage(mweber));
-  console.log(mweber.takeDamage(jabba));
-  console.log(jabba.attack(mweber));
+  console.log(mweber.createdAt);
+  console.log(mweber.dimensions);
+  console.log(mweber.healthPoints);
+  console.log(mweber.name);
+  console.log(mweber.team);
+  console.log(mweber.weapons);
+  console.log(mweber.title);
+  console.log(mweber.motivation);
+  console.log(mweber.saying);
+  console.log(mweber.greet());
+  console.log(mweber.takeDamage());
+  console.log(mweber.destroy());
+  console.log(mweber.giveDamage());
   console.log(mweber.shout());
-
-  console.log(mweber.giveDamage(jabba))
-  console.log(jabba.takeDamage(mweber));
-  console.log(mweber.attack(jabba));
-  console.log(jabba.giveDamage(mweber));
-  console.log(mweber.takeDamage(jabba));
-  console.log(jabba.attack(mweber));
-  console.log(jabba.shout());
-
-  console.log(mweber.giveDamage(jabba))
-  console.log(jabba.takeDamage(mweber));
-  console.log(mweber.attack(jabba));
-  console.log(jabba.giveDamage(mweber));
-  console.log(mweber.takeDamage(jabba));
-  console.log(jabba.attack(mweber));
   console.log(mweber.motive());
 
-  console.log(mweber.giveDamage(jabba))
-  console.log(jabba.takeDamage(mweber));
-  console.log(mweber.attack(jabba));
-  console.log(jabba.giveDamage(mweber));
-  console.log(mweber.takeDamage(jabba));
-  console.log(jabba.attack(mweber));
-  console.log(jabba.motive());
+  console.log(notMack.createdAt);
+  console.log(notMack.dimensions);
+  console.log(notMack.healthPoints);
+  console.log(notMack.name);
+  console.log(notMack.team);
+  console.log(notMack.weapons);
+  console.log(notMack.title);
+  console.log(notMack.motivation);
+  console.log(notMack.saying);
+  console.log(notMack.greet());
+  console.log(notMack.takeDamage());
+  console.log(notMack.destroy());
+  console.log(notMack.giveDamage());
+  console.log(notMack.shout());
+  console.log(notMack.motive());
+  console.log(notMack.cackle());
 
-  console.log(jabba.cackle());
-  console.log(mweber.giveDamage(jabba))
-  console.log(jabba.takeDamage(mweber));
-  console.log(mweber.attack(jabba));
+  console.log(mweber.giveDamage(notMack))
+  console.log(notMack.takeDamage(mweber));
+  console.log(mweber.attack(notMack));
+  console.log(notMack.giveDamage(mweber));
+  console.log(mweber.takeDamage(notMack));
+  console.log(notMack.attack(mweber));
+  console.log(mweber.shout());
+
+  console.log(mweber.giveDamage(notMack))
+  console.log(notMack.takeDamage(mweber));
+  console.log(mweber.attack(notMack));
+  console.log(notMack.giveDamage(mweber));
+  console.log(mweber.takeDamage(notMack));
+  console.log(notMack.attack(mweber));
+  console.log(notMack.shout());
+
+  console.log(mweber.giveDamage(notMack))
+  console.log(notMack.takeDamage(mweber));
+  console.log(mweber.attack(notMack));
+  console.log(notMack.giveDamage(mweber));
+  console.log(mweber.takeDamage(notMack));
+  console.log(notMack.attack(mweber));
+  console.log(mweber.motive());
+
+  console.log(mweber.giveDamage(notMack))
+  console.log(notMack.takeDamage(mweber));
+  console.log(mweber.attack(notMack));
+  console.log(notMack.giveDamage(mweber));
+  console.log(mweber.takeDamage(notMack));
+  console.log(notMack.attack(mweber));
+  console.log(notMack.motive());
+
+  console.log(notMack.cackle());
+  console.log(mweber.giveDamage(notMack))
+  console.log(notMack.takeDamage(mweber));
+  console.log(mweber.attack(notMack));
   console.log(mweber.screech());
 
   // Stretch task: 
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
+
+  console.log(mweber)
